@@ -28,3 +28,32 @@ rows = 1000, senders = 1, readers = 1
 [sender-0] 1000 in 92.0267ms
 [reader-0] 13.4515ms
 ```
+
+### Some Tests
+#### DigitalOcean
+Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz / 64Gb
+
+```bash
+./bench -rows 3500 -s 10 -r 1
+```
+avg latency 238ms
+
+```bash
+./bench -rows 3500 -s 10 -r 4
+```
+avg latency 295ms
+
+
+### ScaleWay
+AMD EPYC 7281 16-Core Processor / 96Gb
+
+```bash
+./bench --rows 1350 -s 10 -r 1
+```
+avg latency 157ms
+
+```bash
+./bench --rows 1350 -s 10 -r 10
+```
+avg latency 159ms
+
